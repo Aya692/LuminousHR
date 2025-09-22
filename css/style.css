@@ -127,6 +127,7 @@ header .logo img {
     -moz-transition: 0.3s;
     -aqms-transition: 0.3s;
     -o-transition: 0.3s;
+    -ms-transition: 0.3s;
 }
 .home-content button:hover {
     background-color: white;
@@ -516,149 +517,113 @@ header .logo img {
     font-size: 4vw;
   }
 }
-
-
-
-/* Footer Container */
-footer {
-  background: #1c1c1c;
-  color: #ddd;
-  padding: 40px 20px;
+footer{
+    background-color: #222222;
+    color: white;
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
-
 .footer-container {
-  display: flex;
-
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  max-width: 1200px;
-  margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
 }
-
-
-.footer-column h3 {
-  color: #fff;
-  margin-bottom: 15px;
-  font-size: 16px;
+.footer-column {
+    width: calc(25% - 20px);
+    color: #8e8e8e;
+    font-size: 0.8rem;
 }
-
-.footer-column p,
 .footer-column a {
-  font-size: 14px;
-  color: #bbb;
-  text-decoration: none;
-  line-height: 1.8;
+        color: #8e8e8e;
+
+    text-decoration: none;
+}
+.footer-column h3 {
+    margin-bottom: 0.6rem;
+    color: white;
 }
 
-.footer-column a:hover {
-  color: #fff;
+footer .newsletter {
+   display: flex;
+   margin-top: 0.5rem;
 }
 
-/* Newsletter */
-.newsletter {
-  display: flex;
-  max-width: 300px;
-  margin-top: 10px;
-}
-
-.newsletter input {
+.newsletter input{
   flex: 1;
-  padding: 10px;
+  padding: 8px;
   border: none;
   border-radius: 4px 0 0 4px;
-  outline: none;
   -webkit-border-radius: 4px 0 0 4px;
   -moz-border-radius: 4px 0 0 4px;
   -ms-border-radius: 4px 0 0 4px;
   -o-border-radius: 4px 0 0 4px;
 }
 
-.newsletter button {
-  background: #f39c12;
-  color: #fff;
+.newsletter button{
+  background: orange;
   border: none;
-  padding: 10px 20px;
+  padding: 8px 10px;
   border-radius: 0 4px 4px 0;
   cursor: pointer;
-  transition: 0.3s;
+  color: #fff;
   -webkit-border-radius: 0 4px 4px 0;
   -moz-border-radius: 0 4px 4px 0;
   -ms-border-radius: 0 4px 4px 0;
   -o-border-radius: 0 4px 4px 0;
-  -webkit-transition: 0.3s;
-  -moz-transition: 0.3s;
-  -ms-transition: 0.3s;
-  -o-transition: 0.3s;
 }
+.newsletter  {
+    margin-bottom: 3rem;
 
-.newsletter button:hover {
-  background: #d35400;
 }
-
-/* Footer Bottom */
 .footer-bottom {
-  text-align: center;
-  font-size: 13px;
-  color: #aaa;
-  margin-top: 30px;
+    line-height: 1.4rem
 }
-
-.footer-bottom a {
-  color: #bbb;
-  text-decoration: none;
-  margin: 0 5px;
+footer .footer-column p {
+    margin-bottom: 0.3rem ;
 }
-
-.footer-bottom a:hover
-{
-  color: #fff;
-
-}
-.footer-column a:hover {
+footer .footer-column p:hover {
+    color: white;
     text-decoration: underline;
-    
 }
-.footer-column p:hover {
-        text-decoration: underline;
-
+footer .footer-column a:hover {
+    text-decoration: underline;
+    color: white;
 }
 
-/* 📱 Responsive Design */
 
-/* --- Tablet --- */
+
 @media (max-width: 1024px) {
-  .footer-container {
-    flex-direction: row;
-    text-align: center;
-    align-items: center;
-  }
-
-  .newsletter {
-    max-width: 100%;
-  }
-}
-
-/* --- Mobile --- */
-@media (max-width: 600px) {
-  .footer-column {
-    flex: 1 1 100%;
-  }
-
-  .newsletter {
-    flex-direction: column;
-  }
-
-  .newsletter input,
-  .newsletter button {
-    border-radius: 4px;
-    width: 100%;
-    margin: 5px 0;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
-}
-
+    .footer-column {
+        flex: 0 0 calc(50% - 10px); 
+    }
  
+}
+
+@media (max-width: 600px) {
+    .footer-column {
+        flex: 0 0 100%;
+    }
+
+    .newsletter {
+        flex-direction: column;
+    }
+    .newsletter input,
+    .newsletter button {
+        width: 100%;
+        margin-bottom: 10px;
+        border-radius: 4px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        -ms-border-radius: 4px;
+        -o-border-radius: 4px;
+}
+
+
+
+.parent-footer {
+    display: flex;
+    flex-direction: row;
+    gap: 0.1em;
+}
 }
