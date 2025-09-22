@@ -125,7 +125,7 @@ header .logo img {
     -o-border-radius: 5px;
     -webkit-transition: 0.3s;
     -moz-transition: 0.3s;
-    -ms-transition: 0.3s;
+    -aqms-transition: 0.3s;
     -o-transition: 0.3s;
 }
 .home-content button:hover {
@@ -154,11 +154,15 @@ header .logo img {
     .burger {
         display: flex;
     }
+
     .home .home-content h1{
        font-size: 1.875rem;
     }
     .home .home-content p{
         font-size: 1rem;
+    }
+    .home {
+        background-position:  center top;
     }
 }
 
